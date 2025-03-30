@@ -1,5 +1,6 @@
 #!/opt/homebrew/bin/python3
 # the above shebang means i can run this script (on my mac, anyway) by just typing `./main.py` in the terminal.
+from stats import get_book_wordcount
 
 def get_book_text(file_path):
     """
@@ -13,16 +14,6 @@ def get_book_text(file_path):
         contents = file.read()
         file.close()
     return contents
-
-def get_book_wordcount(book_text):
-    """
-    Counts the number of words in the book text.
-    
-    :param book_text: The text of the book.
-    :return: Word count of the book text.
-    """
-    word_count = len(book_text.split())
-    return word_count
 
 def main():
     """
