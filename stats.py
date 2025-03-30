@@ -35,7 +35,7 @@ def sort_character_count(character_count: dict):
     outlist = []
     for key, value in character_count.items():
         dict_to_append = {
-            "character": key,
+            "letter": key,
             "num": value
         }
         outlist.append(dict_to_append)
