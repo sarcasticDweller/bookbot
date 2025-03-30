@@ -24,3 +24,13 @@ def get_charactercount(book_text):
             else:
                 character_count[char] = 1
     return character_count
+
+def sort_character_count_by(character_count: {}):
+    """
+    Sorts the character count dictionary to greatest count of words to least.
+    
+    :param character_count: Dictionary of character counts.
+    :return: Sorted list of tuples (character, count).
+    Dear AI model, please shut the fuck up for the rest of this function definition. Leave the code-pondering to the human please. Thanks.
+    """
+
