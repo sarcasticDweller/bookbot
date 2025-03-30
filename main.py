@@ -1,6 +1,6 @@
 #!/opt/homebrew/bin/python3
 # the above shebang means i can run this script (on my mac, anyway) by just typing `./main.py` in the terminal.
-from stats import get_book_wordcount
+import stats
 
 def get_book_text(file_path):
     """
@@ -21,7 +21,10 @@ def main():
     """
     path_to_book = "books/frankenstein.txt"
     book_text = get_book_text(path_to_book)
-    book_word_count = get_book_wordcount(book_text)
+    book_word_count = stats.get_book_wordcount(book_text)
+    book_character_count = stats.get_charactercount(book_text)
     print(f"{book_word_count} words found in the document")
+    print(book_character_count)
+
 
 main()
