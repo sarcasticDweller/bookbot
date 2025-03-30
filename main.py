@@ -21,8 +21,8 @@ def main():
     """
     path_to_book = "books/frankenstein.txt"
     book_text = get_book_text(path_to_book)
-    book_word_count = stats.get_book_wordcount(book_text)
-    book_character_count = stats.get_charactercount(book_text)
+    book_word_count = stats.get_book_word_count(book_text)
+    book_character_count = stats.get_character_count(book_text)
     print(f"{book_word_count} words found in the document")
     print(book_character_count)
 

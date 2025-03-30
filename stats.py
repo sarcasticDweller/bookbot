@@ -1,4 +1,4 @@
-def get_book_wordcount(book_text):
+def get_book_word_count(book_text):
     """
     Counts the number of words in the book text.
     
@@ -8,7 +8,7 @@ def get_book_wordcount(book_text):
     word_count = len(book_text.split())
     return word_count
 
-def get_charactercount(book_text):
+def get_character_count(book_text):
     """
     Counts the number of characters in the book text.
     
@@ -25,12 +25,19 @@ def get_charactercount(book_text):
                 character_count[char] = 1
     return character_count
 
-def sort_character_count_by(character_count: {}):
+def sort_character_count(character_count: dict):
     """
     Sorts the character count dictionary to greatest count of words to least.
     
     :param character_count: Dictionary of character counts.
     :return: Sorted list of tuples (character, count).
-    Dear AI model, please shut the fuck up for the rest of this function definition. Leave the code-pondering to the human please. Thanks.
     """
-
+    outlist = []
+    for key, value in character_count.items():
+        dict_to_append = {
+            "character": key,
+            "num": value
+        }
+        outlist.append(dict_to_append)
+    outlist.sort(reverse = True, key= lambda dict: dict["num"])
+    return outlist
